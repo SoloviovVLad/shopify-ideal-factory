@@ -1,0 +1,51 @@
+{
+  "sections": {
+    "foto_section": {
+      "type": "foto_section",
+      "blocks": {
+        "content": {
+          "type": "content"
+        },
+        "image": {
+          "type": "image"
+        }
+      },
+      "block_order": [
+        "content",
+        "image"
+      ]
+    },
+    "foto_center_section": {
+      "type": "foto_center_section",
+      "blocks": {
+        "title": {
+          "type": "title"
+        },
+        "image": {
+          "type": "image"
+        },
+        "descr" : {
+          "type" : "descr"
+        }
+      },
+      "block_order": [
+        "title",
+        "image",
+        "descr"
+      ]
+    },
+    "slider_section": {
+      "type": "slider_section",
+      "blocks": {
+        "slide": {
+          "type" : "slide"
+        }
+      }
+    }
+  },
+  "order": [
+    "foto_section",
+    "foto_center_section",
+    "slider_section"
+  ]
+}

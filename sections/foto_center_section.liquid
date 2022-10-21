@@ -1,0 +1,100 @@
+	<div class="section_in">
+		<div class="img_center_section__wrapper">
+			{%- for block in section.blocks -%}
+				{%- case block.type -%}
+					{%- when 'title' -%}
+						<div class="img_center_section__content">
+							<h2 class="img_center_section__title">
+								{{ block.settings.title | escape }}
+							</h2>
+						</div>
+					{%- when 'image' -%}
+						<div class="img_center_section__photo">
+							{%- if block.settings.image != blank -%}
+								<img class="cover_img" src="{{ block.settings.image | img_url: "master" }}" alt="" >
+							{%- else -%}
+								{{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+							{% endif %}
+						</div>
+					{%- when 'descr' -%}
+						<div class="img_center_section__content">
+							<div class="img_center_section__descr">
+									<p>{{ block.settings.parag_1 | escape }}</p>
+									<p>{{ block.settings.parag_2 | escape }}</p>
+							</div>
+						</div>
+				{%- endcase -%}
+			{%- endfor -%}
+		</div>
+	</div>
+
+{% schema %}
+{
+	"name": "Foto center section",
+  "tag": "section",
+  "class": "section",
+	"blocks": [
+		{
+			"type": "title",
+			"name": "title",
+			"limit": 1,
+			"settings": [
+				{
+					"id": "title",
+					"type": "text",
+					"default": "Design, Build & Sell your products",
+					"label": "Title"
+				}
+			]
+		},
+		{
+			"type": "image",
+			"name": "Image",
+			"limit": 1,
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Your image"
+				}
+			]
+		},
+		{
+			"type" : "descr",
+			"name" : "descr",
+			"limit": 1,
+			"settings": [
+				{
+					"id": "parag_1",
+					"type": "text",
+					"default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.",
+					"label": "Paragraph №1"
+				},
+				{
+					"id": "parag_2",
+					"type": "text",
+					"default": "Tellus dictum elementum purus pharetra dolor sit volutpat pretium. Elementum vitae risus sit quis. Sed quis gravida aliquet sodales malesuada potenti venenatis eu imperdiet.",
+					"label": "Paragraph №2"
+				}
+			]
+		}
+	],
+
+	"presets": [
+		{
+			"name": "Foto center section",
+			"blocks": [
+				{
+					"type": "title"
+				},
+				{
+					"type": "image"
+				},
+				{
+					"type": "descr"
+				}
+			]
+		}
+	]
+}
+{% endschema %}
