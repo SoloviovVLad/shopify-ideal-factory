@@ -1,0 +1,68 @@
+<section class="section">
+  <div class="section_in section_scrollbar_in">
+    <div class="swiper-container scrollbar_swiper">
+      <div class="swiper-wrapper scrollbar_swiper__inner">
+        {%- for block in section.blocks -%}
+
+          <div class="swiper-slide scrollbar_slide">
+            <div class="scrollbar_slide__photo">
+              <picture>
+                <source srcset="images/img_9.jpg" type="image/jpg">
+                <img class="cover_img" src="images/img_9.jpg" alt="">
+              </picture>
+            </div>
+          </div>
+
+        {% endfor %}
+
+      </div>
+
+      <div class="swiper-scrollbar">
+        <div class="swiper-scrollbar-drag"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Scrollbar Section",
+    "tag": "section",
+    "class": "section",
+    "blocks": [
+      {
+        "type": "slide",
+        "name": "slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Your image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Scrollbar section",
+        "blocks": [
+          {
+            "type": "slide"
+          },
+          {
+            "type": "slide"
+          },
+          {
+            "type": "slide"
+          },
+          {
+            "type": "slide"
+          },
+          {
+            "type": "slide"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
