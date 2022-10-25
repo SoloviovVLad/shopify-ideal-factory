@@ -4,42 +4,94 @@
       "type": "foto_section",
       "blocks": {
         "content": {
-          "type": "content"
+          "type": "content",
+          "settings": {
+            "title": "Where imagination & creativity come to life",
+            "descr": "lorem ipsum AdAF ASDG AS DFJKG JADSFGHHA"
+          }
         },
         "image": {
-          "type": "image"
+          "type": "image",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "content",
         "image"
-      ]
+      ],
+      "settings": {
+      }
     },
     "foto_center_section": {
       "type": "foto_center_section",
       "blocks": {
         "title": {
-          "type": "title"
+          "type": "title",
+          "settings": {
+            "title": "Design, Build & Sell your products"
+          }
         },
         "image": {
-          "type": "image"
+          "type": "image",
+          "settings": {
+          }
         },
-        "descr" : {
-          "type" : "descr"
+        "descr": {
+          "type": "descr",
+          "settings": {
+            "parag_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet interdum massa in pulvinar ante. Tincidunt vivamus nulla magna semper lacus lacinia maecenas sed. Arcu commodo urna, phasellus neque.",
+            "parag_2": "Tellus dictum elementum purus pharetra dolor sit volutpat pretium. Elementum vitae risus sit quis. Sed quis gravida aliquet sodales malesuada potenti venenatis eu imperdiet."
+          }
         }
       },
       "block_order": [
         "title",
         "image",
         "descr"
-      ]
+      ],
+      "settings": {
+      }
     },
     "slider_section": {
       "type": "slider_section",
       "blocks": {
-        "slide": {
-          "type" : "slide"
+        "b01c4ab4-2730-4c67-b834-3ab9482aa380": {
+          "type": "slide",
+          "settings": {
+            "title": "Where imagination & creativity come to life",
+            "descr": "lorem ipsum AdAF ASDG AS DFJKG JADSFGHHA"
+          }
+        },
+        "0fd5e6fa-5838-42a6-afa4-236956c1bed4": {
+          "type": "slide",
+          "settings": {
+            "title": "Where imagination & creativity come to life",
+            "descr": "lorem ipsum AdAF ASDG AS DFJKG JADSFGHHA"
+          }
+        },
+        "c94c0537-433f-40cb-a288-70f5c7a16796": {
+          "type": "slide",
+          "settings": {
+            "title": "Where imagination & creativity come to life",
+            "descr": "lorem ipsum AdAF ASDG AS DFJKG JADSFGHHA"
+          }
+        },
+        "3faff4ed-ef25-4e9b-aac1-7e6125448868": {
+          "type": "slide",
+          "settings": {
+            "title": "Where imagination & creativity come to life",
+            "descr": "lorem ipsum AdAF ASDG AS DFJKG JADSFGHHA"
+          }
         }
+      },
+      "block_order": [
+        "b01c4ab4-2730-4c67-b834-3ab9482aa380",
+        "0fd5e6fa-5838-42a6-afa4-236956c1bed4",
+        "c94c0537-433f-40cb-a288-70f5c7a16796",
+        "3faff4ed-ef25-4e9b-aac1-7e6125448868"
+      ],
+      "settings": {
       }
     }
   },
