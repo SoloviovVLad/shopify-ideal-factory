@@ -93,11 +93,51 @@
       ],
       "settings": {
       }
+    },
+    "53a8ece8-3220-4030-9791-7180dc1743ee": {
+      "type": "scrollbar_section",
+      "blocks": {
+        "template--16728135303450__53a8ece8-3220-4030-9791-7180dc1743ee-16667102396bd4d35c-0": {
+          "type": "slide",
+          "settings": {
+          }
+        },
+        "template--16728135303450__53a8ece8-3220-4030-9791-7180dc1743ee-16667102396bd4d35c-1": {
+          "type": "slide",
+          "settings": {
+          }
+        },
+        "template--16728135303450__53a8ece8-3220-4030-9791-7180dc1743ee-16667102396bd4d35c-2": {
+          "type": "slide",
+          "settings": {
+          }
+        },
+        "template--16728135303450__53a8ece8-3220-4030-9791-7180dc1743ee-16667102396bd4d35c-3": {
+          "type": "slide",
+          "settings": {
+          }
+        },
+        "template--16728135303450__53a8ece8-3220-4030-9791-7180dc1743ee-16667102396bd4d35c-4": {
+          "type": "slide",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "template--16728135303450__53a8ece8-3220-4030-9791-7180dc1743ee-16667102396bd4d35c-0",
+        "template--16728135303450__53a8ece8-3220-4030-9791-7180dc1743ee-16667102396bd4d35c-1",
+        "template--16728135303450__53a8ece8-3220-4030-9791-7180dc1743ee-16667102396bd4d35c-2",
+        "template--16728135303450__53a8ece8-3220-4030-9791-7180dc1743ee-16667102396bd4d35c-3",
+        "template--16728135303450__53a8ece8-3220-4030-9791-7180dc1743ee-16667102396bd4d35c-4"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "foto_section",
     "foto_center_section",
-    "slider_section"
+    "slider_section",
+    "53a8ece8-3220-4030-9791-7180dc1743ee"
   ]
 }
