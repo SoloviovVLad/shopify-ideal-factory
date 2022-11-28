@@ -1,0 +1,45 @@
+<footer class="footer">
+	<div class="footer_inner">		
+			<div class="footer_content">
+				<div class="footer_content__title">
+					{{ section.settings.title | escape }}
+				</div>
+				<p class="footer_content__descr">
+					{{ section.settings.descr | escape }}
+				</p>
+			</div>
+		<form class="footer_form" action="">
+			<div class="footer_form__input">
+				<div class="footer_form__field">
+					<input class="footer_form__input_email" type="email" placeholder="Email">
+				</div>
+			</div>
+			<button class="footer_form__btn_submit main_btn" type="submit">Sign up</button>
+		</form>
+	</div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+	"settings" : [
+		{
+		"id": "title",
+		"type": "text",
+		"default": "Default title, use editor to add your",
+		"label": "Title"
+		},
+		{
+		"id": "descr",
+		"type": "text",
+		"default": "Default description, use editor to add your",
+		"label": "Description"
+		}
+	],
+	"presets": [
+		{
+			"name": "Foto Section"
+		}
+	]
+}
+{% endschema %}

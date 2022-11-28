@@ -1,0 +1,91 @@
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer="defer"></script>
+<script src="{{ 'single_slider' | append: '.js' | asset_url }}" defer="defer"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+<section class="section"> 
+	<div class="section_in">
+		<div class="swiper-container single_swiper swiper-fade swiper-initialized swiper-horizontal swiper-pointer-events swiper-watch-progress swiper-backface-hidden">
+			<div class="swiper-buttons-block">
+				<button class="swiper-button-prev arrow_single_prev swiper-button-disabled" disabled="">
+					<img src="../assets/arrow_prev_single_slider.svg" alt="arrow prev">
+				</button>
+				<button class="swiper-button-next arrow_single_next">
+					<img src="../assets/arrow_next_single_slider.svg" alt="arrow next">
+				</button>
+			</div>
+			<div class="swiper-wrapper single_inner">
+
+      	{%- for block in section.blocks -%}
+
+					<div class="img_center_section__wrapper swiper-slide section_img_center__wrapper swiper-slide-visible swiper-slide-active">
+						<div class="img_center_section__content">
+							<h2 class="img_center_section__title">
+								{{ block.settings.title | escape }}
+							</h2>
+						</div>
+						<div class="img_center_section__photo">
+
+							{%- if block.settings.image != blank -%}
+								<img class="img_right_section__img cover_img" src="{{ block.settings.image | img_url: "master" }}" alt="" >
+							{%- else -%}
+								{{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+							{% endif %}
+
+						</div>
+						<div class="img_center_section__content">
+							<div class="img_center_section__caption">
+								{{ block.settings.caption | escape }}
+							</div>
+							<div class="img_center_section__descr">
+								{{ block.settings.descr | escape}}
+							</div>
+						</div>
+					</div>
+
+				{% endfor %}
+
+			</div>
+		</div>
+	</div>
+</section>
+
+{% schema %}
+  {
+    "name": "Single slider section",
+    "tag": "section",
+    "class": "section",
+    "blocks": [
+      {
+        "type": "slide",
+        "name": "slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Your image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title of this slide"
+          },
+          {
+            "type": "text",
+            "id": "caption",
+            "label": "Caption of this slide"
+          },
+          {
+            "type": "text",
+            "id": "descr",
+            "label": "Description of this slide"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Single slider section"
+      }
+    ]
+  }
+{% endschema %}

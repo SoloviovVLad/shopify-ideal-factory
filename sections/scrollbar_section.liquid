@@ -1,3 +1,7 @@
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer="defer"></script>
+<script src="{{ 'scrollbar_slider' | append: '.js' | asset_url }}" defer="defer"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
 <section class="section">
   <div class="section_in section_scrollbar_in">
     <div class="swiper-container scrollbar_swiper">
@@ -6,10 +10,11 @@
 
           <div class="swiper-slide scrollbar_slide">
             <div class="scrollbar_slide__photo">
-              <picture>
-                <source srcset="images/img_9.jpg" type="image/jpg">
-                <img class="cover_img" src="images/img_9.jpg" alt="">
-              </picture>
+              {%- if block.settings.image != blank -%}
+                <img class="cover_img" src="{{ block.settings.image | img_url: "master" }}" alt="">
+              {%- else -%}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+              {% endif %}
             </div>
           </div>
 
